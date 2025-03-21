@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Netflix Movie App</title>
+</head>
+<body>
+  <header class="top-bar">
+    <button class="nav-btn open-btn" aria-label="Open navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" class="logo">
+    <form id="form" class="search-container">
+      <input type="text" id="search" class="search" placeholder="Search Movies...">
+    </form>
+  </header>
+  
+  <div class="nav nav-black">
+    <div class="nav nav-red">
+      <div class="nav nav-white">
+        <button class="nav-btn close-btn" aria-label="Close navigation">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="list">
+          <li><a href="#" onclick="setActiveCategory(this); getMovies(API_URL)">Home</a></li>
+          <li><a href="#" onclick="setActiveCategory(this); getMovies(HORROR_API)">Horror</a></li>
+          <li><a href="#" onclick="setActiveCategory(this); getMovies(COMEDY_API)">Comedy</a></li>
+          <li><a href="#" onclick="setActiveCategory(this); getMovies(ROMANCE_API)">Romance</a></li>
+          <li><a href="#" onclick="setActiveCategory(this); getMovies(CRIME_API)">Crime</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <main id="main"></main>
+  <p id="no-results" class="hidden">No results found.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
